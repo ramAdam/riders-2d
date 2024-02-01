@@ -1,8 +1,9 @@
 file(GLOB ENTITY_SOURCES "private/Entity/*.cpp")
+file(GLOB MAP_SOURCES "private/Map/*.cpp")
 
 
 # Add the executable
-add_executable(${PROJECT_NAME} private/Game.cpp  ${ENTITY_SOURCES})
+add_executable(${PROJECT_NAME} private/Game.cpp  ${ENTITY_SOURCES} ${MAP_SOURCES})  
 
 # Include public headers
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/public)
